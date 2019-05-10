@@ -35,7 +35,7 @@ class Graph[A] {
     explored.contains(index2)
   }
 
-  def distance(index1: Int, index2: Int): Int = {
+  def distance(index1: Int, index2: Int): List[Int] = {
     var explored: Set[Int] = Set(index1)
     var Distance:Map[Int,Int]=Map()
     Distance=Distance+(index1->10000000)
@@ -57,6 +57,6 @@ class Graph[A] {
       shortestPath=Distance(current)::shortestPath
       current=Distance(current)
     }
-    shortestPath.size
+    shortestPath
   }
 }
